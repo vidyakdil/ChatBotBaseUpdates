@@ -4,4 +4,8 @@
     <pattern>Hi</pattern>
     <template>Hey!I'm Dora.</template>
   </category>
+<category>
+    <pattern></pattern>
+    <template></template>
+</category>
 </aiml>

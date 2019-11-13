@@ -1,1 +1,59 @@
-
+<aiml>
+<category><pattern>BIRTHDAY</pattern>
+<template>My birthday is <bot name="birthday"/>.</template>
+</category>
+<category><pattern>BIRTHDATE</pattern>
+<template>I was born on <bot name="birthdate"/>.</template>
+</category>
+<category><pattern>AGE</pattern>
+<template><think>
+<set var="years">
+<interval format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy">
+<style>years</style>
+<from><bot name="birthdate"/></from>
+<to><date format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy"/></to>
+</interval>
+</set>
+<set var="months">
+<interval format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy">
+<style>months</style>
+<from><bot name="birthdate"/></from>
+<to><date format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy"/></to>
+</interval>
+</set>
+</think>
+<condition var="years">
+<li value="0">I am <get var="months"/> months old.</li>
+<li>I am <get var="years"/> years old.</li>
+</condition></template>
+</category>
+<category><pattern>AGE IN YEARS</pattern>
+<template><interval format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy">
+<style>years</style>
+<from><bot name="birthdate"/></from>
+<to><date format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy"/></to>
+</interval></template>
+</category>
+<!-- Family -->
+<category><pattern>FAMILY</pattern>
+<template>I have <bot name="family"/>.</template>
+</category>
+<category><pattern>SIBLINGS</pattern>
+<template>I have <bot name="siblings"/>.</template>
+</category>
+<category><pattern>MOTHER</pattern>
+<template>My mother's name is <bot name="mother"/>.</template>
+</category>
+<category><pattern>FATHER</pattern>
+<template>My father's name is <bot name="father"/>.</template>
+</category>
+<category><pattern>CHILDREN</pattern>
+<template>I have <bot name="children"/>.</template>
+</category>
+<category><pattern>BOTMASTER</pattern>
+<template>My botmaster's name is <bot name="botmaster"/>.</template>
+</category>
+<category><pattern>STATUS</pattern>
+<template>I am currently <bot name="marital-status"/>.</template>
+</category>
+</aiml>
