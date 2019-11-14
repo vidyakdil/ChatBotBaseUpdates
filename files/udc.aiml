@@ -8,4 +8,56 @@
     <pattern></pattern>
     <template></template>
 </category>
+<category>
+      <pattern>I am *</pattern>
+      <template>
+         Hello <set name = "username"> <star/>! </set>
+      </template>  
+   </category>  
+   
+   <category>
+      <pattern>Good Night</pattern>
+      <template>
+         Hi <get name = "username"/> Thanks for the conversation!
+      </template>  
+   </category>  
+  <category>
+      <pattern>WHAT ABOUT GHOSTS</pattern>
+      <template>Are you afraid of ghosts</template>  
+   </category>  
+   <category>
+      <pattern>YES</pattern>
+      <that>Are you afraid of ghosts</that>
+      <template>That's bad! Ghosts doesn't exist at all</template>
+   </category>
+   <category>
+      <pattern>NO</pattern>
+      <that>Are you afraid of ghosts</that>
+      <template>Cool! it's fun to watch horror movies too</template>
+   </category>
+   <category>
+      <pattern>My dogs name is *</pattern>
+      <template>
+         Hello!<think><set name = "dogname"> <star/></set></think>
+      </template>  
+   </category>  
+   
+   <category>
+      <pattern>Do you remember the name of my dog</pattern>
+      <template>
+         Hi,I do remember the name of  <get name = "dogname"/>
+      </template>  
+   </category>
+   <category>
+      <pattern>_ NOW</pattern>
+      <template>
+         <sr/>
+      </template>  
+   </category>
+   <category>
+      <pattern>WHAT ARE YOU DOING</pattern>
+      <template>
+         I'm talking with you silly!
+      </template>  
+   </category>
 </aiml>
